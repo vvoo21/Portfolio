@@ -56,7 +56,7 @@ h1 {
 .social-text {
   padding-top: 40px;
   margin: 30px;
-  width: 121px;
+  width: 150px;
   height: 24px;
   color: #7f8cff;
   font-size: 16px;
@@ -65,6 +65,7 @@ h1 {
 }
 
 .social-media {
+  list-style-type: none;
   padding-top: 7px;
   margin: 30px;
   display: flex;
