@@ -1,0 +1,75 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.mobile {
+  height: 718px;
+  width: 377px;  
+  font-family: "poppins";
+}
+
+.toolbar {
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+    color: #6070FF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+  }
+
+  .headline-section {
+    width: 373px;
+    height: 596px;
+    background: url(img/header-shapes\ mobile@2x.svg);
+    flex-direction: column;   
+  }
+
+  h1 {
+    padding-top: 20%;
+    margin: 30px;
+    width: 327px;
+    height: 150px;
+    color: #172B4D;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+  }
+
+  .about-me {
+    padding-top: 55px;
+    margin: 30px;
+    width: 327px;
+    height: 146px;
+    color: #344563;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .social-text {
+    padding-top: 40px;
+    margin: 30px;
+    width: 121px;
+    height: 24px;
+    color: #7F8CFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  .social-media {
+    padding-top: 7px;
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+  }
+
+
