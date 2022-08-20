@@ -11,7 +11,7 @@
   width: 375px;
   display: flex;
   flex-direction: column;
-  background: url(img/header-background-mobile\ \(2\).svg);
+  background: url(img/headerbackgroundmobile2.svg);
 }
 
 .toolbar {
@@ -22,7 +22,11 @@
   height: 100px;
 }
 
-.bars, .social:hover {
+.social:hover {
+  background-color: #abb7cec4;
+}
+
+.bars {
   background-color: #abb7cec4;
 }
 
@@ -72,20 +76,20 @@ h1 {
 }
 
 .works {
-width: 327px;
-height: 552px;
-border: 1px solid #dfe1e6;
-border-radius: 16px;
-display: grid;
-padding: 16px;
-grid-template-columns: 1fr;
-background: #ffffff;
+  width: 327px;
+  height: 552px;
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  display: grid;
+  padding: 16px;
+  grid-template-columns: 1fr;
+  background: #fff;
 }
 
-.projects{
-display: flex;
-flex-direction: column;
-gap: 20px;
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .project-tittle {
@@ -93,13 +97,6 @@ gap: 20px;
   font-size: 32px;
   font-weight: 700;
   line-height: 44px;
-}
-
-.project-info {
-  color: #7a869a;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 16px;
 }
 
 .client {
@@ -113,7 +110,17 @@ gap: 20px;
   line-height: 24px;
 }
 
-.categories, .project-info {
+.project-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #7a869a;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.categories {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -160,16 +167,16 @@ gap: 20px;
 .one {
   display: flex;
   justify-content: space-between;
-  color: #000000;
+  color: #000;
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
 }
 
 .skill {
- display: flex;
- flex-direction: column;
- gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .line {
