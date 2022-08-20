@@ -85,7 +85,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 88px;
-  padding: 114px 24px; 
+  padding: 114px 24px;
 }
 
 .works {
