@@ -4,12 +4,19 @@
 
 > Portfolio: setup and mobile first
 
-
 ## Built With
 
 - HTML
 - CSS
 
+## Getting Started
+
+To get a local copy up and running follow these simple example steps:
+
+- First Clone the repository Portafolio
+- To navigate into the project directory, use "cd / portafolio"
+
+download and enjoy https://github.com/vvoo21/Portfolio
 
 ## Authors
 
