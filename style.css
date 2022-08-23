@@ -207,3 +207,82 @@ h1 {
   width: 327px;
   height: 1px;
 }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  height: 779px;
+  background: url(img/Contactme.png);
+}
+
+.contact-background {
+  background: url(img/contactfinal.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  width: 375px;
+  height: 710px;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  padding: 70px 24px;
+}
+
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-text {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+  text-align: center;
+}
+
+.contact-info {
+  color: #ebebff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  padding-top: 50px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 21px;
+}
+
+#name {
+  width: 327px;
+  height: 48px;
+  border: 1px solid #cfd8dc;
+  background: #fff;
+  border-radius: 8px;
+}
+
+#mail {
+  width: 327px;
+  height: 48px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px; 
+  background: #fff;
+}
+
+#message-text {
+  width: 327px;
+  height: 170px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px; 
+  background: #fff;
+}
