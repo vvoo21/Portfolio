@@ -224,7 +224,7 @@ footer {
   height: 710px;
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
+  justify-content: flex-start;
   padding: 70px 24px;
 }
 
@@ -275,7 +275,7 @@ form {
   width: 327px;
   height: 48px;
   border: 1px solid #cfd8dc;
-  border-radius: 8px; 
+  border-radius: 8px;
   background: #fff;
 }
 
@@ -283,6 +283,6 @@ form {
   width: 327px;
   height: 170px;
   border: 1px solid #cfd8dc;
-  border-radius: 8px; 
+  border-radius: 8px;
   background: #fff;
 }
