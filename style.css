@@ -29,6 +29,12 @@ nav {
   font-size: 15px;
   font-weight: 500;
   line-height: 20px;
+  transition-property: font-size;
+  transition-duration: 1s;
+}
+
+.menu:hover {
+  font-size: 20px;
 }
 
 .profile {
@@ -50,6 +56,26 @@ h1 {
   line-height: 52px;
   margin-bottom: 12px;
   max-width: 360px;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  75% {
+    font-size: 300%;
+    margin-left: 25%;
+    width: 150%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 .about-me {
@@ -172,6 +198,18 @@ h1 {
   background-color: #6070ff;
   color: #fff;
   border-radius: 8px;
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .button:active {
