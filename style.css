@@ -39,7 +39,8 @@ nav {
 
 .profile-background {
   background: url(img/header-shapes\ mobile@2x.svg);
-  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
   padding: 160px 24px 8px 24px;
 }
 
@@ -58,6 +59,7 @@ h1 {
   font-weight: 400;
   line-height: 24px;
   margin-bottom: 12px;
+  max-width: max-content;
 }
 
 .social-text {
@@ -100,7 +102,7 @@ h1 {
   background: #fff;
 }
 
-.project-image{
+.project-image {
   display: flex;
   flex-direction: column;
 }
@@ -112,6 +114,7 @@ h1 {
 .projects {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 20px;
 }
 
@@ -183,6 +186,7 @@ h1 {
   background: #fff;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   padding: 114px 24px 113.85px 24px;
 }
 
@@ -198,6 +202,15 @@ h1 {
   font-weight: 700;
   line-height: 52px;
   margin-bottom: 12px;
+}
+
+.myself-text {
+  color: #344563;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 12px;
+  max-width: max-content;
 }
 
 .about-text {
@@ -222,7 +235,12 @@ h1 {
   padding-top: 48px;
 }
 
-.one {
+.skill-list-desktop {
+  display: none;
+}
+
+.one,
+.skill-options {
   display: flex;
   justify-content: space-between;
   margin-right: 60px;
@@ -243,7 +261,8 @@ h1 {
   line-height: 24px;
 }
 
-.skill {
+.skill,
+.skill-desktop {
   display: flex;
   flex-direction: column;
 }
@@ -257,17 +276,13 @@ h1 {
 footer {
   display: flex;
   flex-direction: column;
-  width: 375px;
-  height: 779px;
-  background: url(img/Contactme.png);
+  background: #6070ff;
 }
 
 .contact-background {
   background: url(img/contactfinal.png);
   background-position: right;
   background-repeat: no-repeat;
-  width: 375px;
-  height: 710px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -295,6 +310,7 @@ footer {
   font-weight: 400;
   line-height: 28px;
   text-align: center;
+  max-width: max-content;
 }
 
 form {
@@ -305,7 +321,6 @@ form {
 .contact-form {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   gap: 21px;
 }
 
@@ -353,16 +368,14 @@ form {
     background: #fff;
     display: flex;
   }
-  
+
   .profile-background {
     background: url(img/Header2x.png);
     background-size: cover;
+    background-position: right;
     padding: 118px 0 76.54px 34.6px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
   }
-  
+
   h1 {
     max-width: 430px;
     margin-top: 150px;
@@ -372,13 +385,15 @@ form {
   }
 
   .about-me {
+    max-width: max-content;
     margin-left: 225px;
     margin-right: 260px;
     font-size: 20px;
     line-height: 28px;
   }
 
-  .social-text,.social-media {
+  .social-text,
+  .social-media {
     margin-left: 225px;
   }
 
@@ -400,7 +415,7 @@ form {
     grid-template-areas: "projectArea imageArea";
     gap: 46px;
   }
-  
+
   .project-image {
     grid-area: imageArea;
   }
@@ -408,7 +423,7 @@ form {
   .projects {
     grid-area: projectArea;
   }
-  
+
   .project-tittle {
     font-size: 40px;
     font-weight: 700;
@@ -420,11 +435,11 @@ form {
     font-weight: 400;
     line-height: 24px;
   }
-  
+
   .client {
     font-weight: 500;
   }
-  
+
   .primary-text {
     font-size: 16px;
     margin-right: 46px;
@@ -432,5 +447,62 @@ form {
 
   .ruby {
     display: flex;
+  }
+
+  .skill-list {
+    display: none;
+  }
+
+  .about-my-self {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "aboutArea skillArea";
+  }
+
+  .about-article {
+    grid-area: aboutArea;
+    margin-left: 142px;
+  }
+
+  .skill-list-desktop {
+    grid-area: skillArea;
+    display: grid;
+    margin: 166px 182px 0 37px;
+  }
+
+  .myself-text {
+    max-width: 450px;
+    margin-top: 12px;
+  }
+
+  .tittle {
+    max-width: 265px;
+    margin-top: 142px;
+  }
+
+  .contact-background {
+    background: url(img/contactdesktop.png);
+    background-size: cover;
+    margin: 79px 74px 48px 75px;
+  }
+
+  .contact-me {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  form {
+    justify-content: center;
+  }
+
+  .contact-info {
+    max-width: 569px;
+  }
+
+  #name,
+  #mail,
+  #message-text {
+    max-width: 447px;
   }
 }
