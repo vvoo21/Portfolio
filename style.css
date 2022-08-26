@@ -126,7 +126,7 @@ h1 {
   background: #fff;
 }
 
-.project-image{
+.project-image {
   display: flex;
   flex-direction: column;
 }
@@ -207,6 +207,7 @@ h1 {
   0% {
     transform: rotate(0);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -391,7 +392,7 @@ form {
     background: #fff;
     display: flex;
   }
-  
+
   .profile-background {
     background: url(img/Header2x.png);
     background-size: cover;
@@ -400,7 +401,7 @@ form {
     flex-direction: column;
     justify-content: flex-end;
   }
-  
+
   h1 {
     max-width: 430px;
     margin-top: 150px;
@@ -416,7 +417,11 @@ form {
     line-height: 28px;
   }
 
-  .social-text,.social-media {
+  .social-text {
+    margin-left: 225px;
+  }
+
+  .social-media {
     margin-left: 225px;
   }
 
@@ -438,7 +443,7 @@ form {
     grid-template-areas: "projectArea imageArea";
     gap: 46px;
   }
-  
+
   .project-image {
     grid-area: imageArea;
   }
@@ -446,7 +451,7 @@ form {
   .projects {
     grid-area: projectArea;
   }
-  
+
   .project-tittle {
     font-size: 40px;
     font-weight: 700;
@@ -458,11 +463,11 @@ form {
     font-weight: 400;
     line-height: 24px;
   }
-  
+
   .client {
     font-weight: 500;
   }
-  
+
   .primary-text {
     font-size: 16px;
     margin-right: 46px;
