@@ -4,71 +4,75 @@
   box-sizing: border-box;
   font-family: "poppins", sans-serif;
   list-style-type: none;
+  text-decoration: none;
 }
 
 body {
   background: #e5e5e5;
 }
 
-.mobile {
-  width: 375px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: url(img/headerbackgroundmobile2.svg);
+header {
+  background: #fff;
 }
 
-.toolbar {
+nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  gap: 180px;
-  height: 83px;
+  padding: 14px 24px;
+  margin: 0 auto;
 }
 
-.headline-background {
-  background: url(img/header-shapes\ mobile@2x.svg);
-  width: 375px;
-  height: 618px;
+.menu {
+  display: none;
+  color: #344563;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.profile {
+  background: #fff;
+  padding-bottom: 26px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 12px;
-  padding-left: 24px;
+}
+
+.profile-background {
+  background: url(img/header-shapes\ mobile@2x.svg);
+  background-size: cover;
+  padding: 160px 24px 8px 24px;
 }
 
 h1 {
-  width: 327px;
-  height: 150px;
   color: #172b4d;
   font-size: 40px;
   font-weight: 700;
   line-height: 52px;
+  margin-bottom: 12px;
+  max-width: 360px;
 }
 
 .about-me {
-  width: 327px;
-  height: 144px;
   color: #344563;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  margin-bottom: 12px;
 }
 
 .social-text {
-  width: 150px;
-  height: 24px;
   color: #7f8cff;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  margin-bottom: 14px;
 }
 
 .social-media {
   display: flex;
   justify-content: flex-start;
-  gap: 25px;
+  gap: 20px;
+  margin-bottom: 136px;
 }
 
 .middle {
@@ -79,13 +83,30 @@ h1 {
 }
 
 .works {
-  width: 327px;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
-  display: flex;
   padding: 16px;
+  display: flex;
   flex-direction: column;
   background: #fff;
+}
+
+.works-2 {
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.project-image{
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 100%;
 }
 
 .projects {
@@ -128,6 +149,10 @@ h1 {
   gap: 10px;
 }
 
+.ruby {
+  display: none;
+}
+
 .button {
   width: fit-content;
   height: 48;
@@ -155,42 +180,63 @@ h1 {
 }
 
 .about-my-self {
-  background: url(img/Baseaboutmyself.png);
-  width: 375px;
+  background: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 114px 24px;
+  padding: 114px 24px 113.85px 24px;
 }
 
 .about-article {
-  width: 327px;
   display: flex;
   flex-direction: column;
   align-items: flex-star;
-  padding: 12px;
-  gap: 30px;
 }
 
 .tittle {
-  width: 250px;
   color: #172b4d;
   font-size: 40px;
   font-weight: 700;
   line-height: 52px;
+  margin-bottom: 12px;
+}
+
+.about-text {
+  color: #7f8cff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 26px;
+}
+
+.about-media {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 22px;
 }
 
 .skill-list {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 12px;
+  padding-top: 48px;
 }
 
 .one {
   display: flex;
   justify-content: space-between;
-  padding-right: 60px;
+  margin-right: 60px;
+  margin-bottom: 36px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.two {
+  display: flex;
+  justify-content: space-between;
+  margin: 36px 60px 23px 0;
   color: #000;
   font-size: 20px;
   font-weight: 500;
@@ -200,12 +246,12 @@ h1 {
 .skill {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .line {
-  width: 327px;
+  width: 100%;
   height: 1px;
+  margin-bottom: 24px;
 }
 
 footer {
@@ -285,4 +331,106 @@ form {
   border: 1px solid #cfd8dc;
   border-radius: 8px;
   background: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    padding: 26px 155px 92px 155px;
+  }
+
+  .bars {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .profile {
+    background: #fff;
+    display: flex;
+  }
+  
+  .profile-background {
+    background: url(img/Header2x.png);
+    background-size: cover;
+    padding: 118px 0 76.54px 34.6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  h1 {
+    max-width: 430px;
+    margin-top: 150px;
+    margin-left: 225px;
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .about-me {
+    margin-left: 225px;
+    margin-right: 260px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .social-text,.social-media {
+    margin-left: 225px;
+  }
+
+  .middle {
+    grid-row-gap: 142px;
+    margin: 142px 142px;
+  }
+
+  .works {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "imageArea projectArea";
+    gap: 46px;
+  }
+
+  .works-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "projectArea imageArea";
+    gap: 46px;
+  }
+  
+  .project-image {
+    grid-area: imageArea;
+  }
+
+  .projects {
+    grid-area: projectArea;
+  }
+  
+  .project-tittle {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+  }
+
+  .project-info {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  
+  .client {
+    font-weight: 500;
+  }
+  
+  .primary-text {
+    font-size: 16px;
+    margin-right: 46px;
+  }
+
+  .ruby {
+    display: flex;
+  }
 }
