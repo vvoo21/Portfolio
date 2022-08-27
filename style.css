@@ -45,7 +45,8 @@ nav {
 
 .profile-background {
   background: url(img/header-shapes\ mobile@2x.svg);
-  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
   padding: 160px 24px 8px 24px;
 }
 
@@ -84,6 +85,7 @@ h1 {
   font-weight: 400;
   line-height: 24px;
   margin-bottom: 12px;
+  max-width: max-content;
 }
 
 .social-text {
@@ -138,6 +140,7 @@ h1 {
 .projects {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 20px;
 }
 
@@ -222,6 +225,7 @@ h1 {
   background: #fff;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   padding: 114px 24px 113.85px 24px;
 }
 
@@ -237,6 +241,15 @@ h1 {
   font-weight: 700;
   line-height: 52px;
   margin-bottom: 12px;
+}
+
+.myself-text {
+  color: #344563;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 12px;
+  max-width: max-content;
 }
 
 .about-text {
@@ -261,7 +274,12 @@ h1 {
   padding-top: 48px;
 }
 
-.one {
+.skill-list-desktop {
+  display: none;
+}
+
+.one,
+.skill-options {
   display: flex;
   justify-content: space-between;
   margin-right: 60px;
@@ -282,7 +300,8 @@ h1 {
   line-height: 24px;
 }
 
-.skill {
+.skill,
+.skill-desktop {
   display: flex;
   flex-direction: column;
 }
@@ -296,27 +315,23 @@ h1 {
 footer {
   display: flex;
   flex-direction: column;
-  width: 375px;
-  height: 779px;
-  background: url(img/Contactme.png);
+  background: #6070ff;
 }
 
 .contact-background {
   background: url(img/contactfinal.png);
   background-position: right;
   background-repeat: no-repeat;
-  width: 375px;
-  height: 710px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 70px 24px;
 }
 
 .contact-me {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 103px 24px 60px 24px;
   gap: 12px;
 }
 
@@ -334,18 +349,19 @@ footer {
   font-weight: 400;
   line-height: 28px;
   text-align: center;
+  max-width: 370px;
 }
 
 form {
   display: flex;
-  padding-top: 50px;
+  justify-content: center;
+  margin: 0 24px 45px 24px;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 21px;
+  gap: 20px;
 }
 
 #name {
@@ -372,6 +388,17 @@ form {
   background: #fff;
 }
 
+#name,
+#mail,
+#message-text {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  align-items: center;
+  color: #172b4d;
+}
+
 @media screen and (min-width: 768px) {
   nav {
     padding: 26px 155px 92px 155px;
@@ -396,10 +423,8 @@ form {
   .profile-background {
     background: url(img/Header2x.png);
     background-size: cover;
+    background-position: right;
     padding: 118px 0 76.54px 34.6px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
   }
 
   h1 {
@@ -411,16 +436,14 @@ form {
   }
 
   .about-me {
+    max-width: max-content;
     margin-left: 225px;
     margin-right: 260px;
     font-size: 20px;
     line-height: 28px;
   }
 
-  .social-text {
-    margin-left: 225px;
-  }
-
+  .social-text,
   .social-media {
     margin-left: 225px;
   }
@@ -475,5 +498,58 @@ form {
 
   .ruby {
     display: flex;
+  }
+
+  .skill-list {
+    display: none;
+  }
+
+  .about-my-self {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "aboutArea skillArea";
+  }
+
+  .about-article {
+    grid-area: aboutArea;
+    margin-left: 142px;
+  }
+
+  .skill-list-desktop {
+    grid-area: skillArea;
+    display: grid;
+    margin: 166px 182px 0 37px;
+  }
+
+  .myself-text {
+    max-width: 450px;
+    margin-top: 12px;
+  }
+
+  .tittle {
+    max-width: 265px;
+    margin-top: 142px;
+  }
+
+  .contact-background {
+    background: url(img/contact\ form\ background\ shapes.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 79.09px 74px 48.21px 135px;
+  }
+
+  form {
+    align-content: center;
+  }
+
+  .contact-info {
+    min-width: 569px;
+  }
+
+  #name,
+  #mail,
+  #message-text {
+    max-width: 447px;
+    border-radius: 0;
   }
 }
