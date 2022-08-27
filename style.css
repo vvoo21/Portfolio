@@ -389,15 +389,15 @@ form {
 }
 
 #name,
-  #mail,
-  #message-text {
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 20px;
-    text-align: left;
-    align-items: center;
-    color: #172b4d;
-  }
+#mail,
+#message-text {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  align-items: center;
+  color: #172b4d;
+}
 
 @media screen and (min-width: 768px) {
   nav {
@@ -550,6 +550,6 @@ form {
   #mail,
   #message-text {
     max-width: 447px;
-    border-radius: 0px;
+    border-radius: 0;
   }
 }
