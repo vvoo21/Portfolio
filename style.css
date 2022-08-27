@@ -128,7 +128,7 @@ h1 {
   background: #fff;
 }
 
-.project-image  {
+.project-image {
   display: flex;
   flex-direction: column;
 }
