@@ -325,13 +325,13 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 70px 24px;
 }
 
 .contact-me {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 103px 24px 60px 24px;
   gap: 12px;
 }
 
@@ -349,18 +349,19 @@ footer {
   font-weight: 400;
   line-height: 28px;
   text-align: center;
-  max-width: max-content;
+  max-width: 370px;
 }
 
 form {
   display: flex;
-  padding-top: 50px;
+  justify-content: center;
+  margin: 0 24px 45px 24px;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 21px;
+  gap: 20px;
 }
 
 #name {
@@ -386,6 +387,17 @@ form {
   border-radius: 8px;
   background: #fff;
 }
+
+#name,
+  #mail,
+  #message-text {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    align-items: center;
+    color: #172b4d;
+  }
 
 @media screen and (min-width: 768px) {
   nav {
@@ -520,28 +532,24 @@ form {
   }
 
   .contact-background {
-    background: url(img/contactdesktop.png);
+    background: url(img/contact\ form\ background\ shapes.svg);
     background-size: cover;
-    margin: 79px 74px 48px 75px;
-  }
-
-  .contact-me {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+    background-repeat: no-repeat;
+    margin: 79.09px 74px 48.21px 135px;
   }
 
   form {
-    justify-content: center;
+    align-content: center;
   }
 
   .contact-info {
-    max-width: 569px;
+    min-width: 569px;
   }
 
   #name,
   #mail,
   #message-text {
     max-width: 447px;
+    border-radius: 0px;
   }
 }
