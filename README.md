@@ -9,6 +9,10 @@
 - HTML
 - CSS
 
+## Live Demo (if available)
+
+[Live Demo Link](https://vvoo21.github.io/Portfolio/)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps:
@@ -17,10 +21,6 @@ To get a local copy up and running follow these simple example steps:
 - To navigate into the project directory, use "cd / portafolio"
 
 download and enjoy https://github.com/vvoo21/Portfolio
-
-## Live Demo (if available)
-
-[Live Demo Link](https://vvoo21.github.io/Portfolio/)
 
 ## Authors
 
