@@ -9,9 +9,9 @@
 - HTML
 - CSS
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://vvoo21.github.io/Portfolio/)
+[Vanessa's Portfolio](https://vvoo21.github.io/Portfolio/)
 
 ## Getting Started
 
