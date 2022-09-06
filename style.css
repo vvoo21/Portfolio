@@ -563,6 +563,7 @@ form {
   top: 0;
   bottom: 0;
   right: 0;
+  display: none;
 }
 
 .main-menu {
@@ -573,10 +574,21 @@ form {
   gap: 40px;
 }
 
-.menu-item a{
+.menu-item {
   color: #fff; 
   font-size: 32px;
   font-weight: 600;
   line-height: 44px;
 }
+
+.cancel {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: fixed;
+  right: 2%;
+  padding: 8px;
+}
+
+
 

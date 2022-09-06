@@ -1,6 +1,16 @@
-const menuMobile = document.querySelectorAll('.mobile-menu');
-const mainMenu = document.querySelectorAll('.main-menu');
+const hamburger = document.querySelector('.bars');
+const mainMenu = document.querySelector('.main-menu');
+const overlay = document.querySelector('.overlay');
+const cancel = document.querySelector('.cancel');
+const links = document.querySelectorAll('.menu-item');
 
-menuMobile.addEventListener('click', () => {
-mainMenu.classList.toggle('');
+hamburger.addEventListener('click', () => {
+  mainMenu.style.display = 'flex';
+  overlay.style.display = 'block';
 });
+
+cancel.addEventListener('click', () =>{
+    overlay.style.display = "none";
+});
+
+
