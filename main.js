@@ -9,11 +9,12 @@ hamburger.addEventListener('click', () => {
   overlay.style.display = 'block';
 });
 
-cancel.addEventListener('click', () =>{
-    overlay.style.display = "none";
+cancel.addEventListener('click', () => {
+  overlay.style.display = 'none';
 });
 
-for(let i = 0; i < links.length; i++){
+for (let i = 0; i < links.length; i += 1) {
   links[i].addEventListener('click', () => {
-    overlay.style.display = "none";
-  })};
+    overlay.style.display = 'none';
+  });
+}
