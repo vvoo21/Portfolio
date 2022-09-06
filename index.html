@@ -12,7 +12,7 @@
   <header class="toolbar">
     <nav>
       <a href="#" class="logo"><img src="img/MyLogo.png" alt="logo"></a>
-      <a href="#" class="bars"><img src="img/Union.png" alt="bars"></a>
+      <a href="#" class="bars"><img src="img/Union.png" alt="icon-hamburger"></a>
       <ul class="menu">
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">About</a></li>
@@ -20,7 +20,7 @@
       </ul>
     </nav>
   </header>
-  <section class="profile">
+  <section id="portfolio-section" class="profile">
     <div class="profile-background">
       <h1>I’m Vanessa Glad to see you!</h1>
       <p class="about-me">I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.</p>
@@ -138,7 +138,7 @@
       </div>
     </div>
   </section>
-  <section class="about-my-self">
+  <section id="about-section" class="about-my-self">
     <div class="about-article">
       <h2 class="tittle">About Myself</h2>
       <p class="myself-text">Hello I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.</p>
@@ -217,7 +217,7 @@
       </ul>
     </div>
   </section>
-  <footer>
+  <footer id="footer-section">
     <div class="contact-background">
       <div class="contact-me">
         <h2 class="contact-text">Contact me</h2>
@@ -241,5 +241,17 @@
       </form>
     </div>
   </footer>
+  <div class="overlay">
+    <div class="cancel">
+      <a href="#"><img src="img/Enabled.png" alt="icon-close"></a>
+    </div> 
+      <ul class="main-menu">
+        <li><a class="menu-item" href="#portfolio-section">Portfolio</a></li>
+        <li><a class="menu-item" href="#about-section">About</a></li>
+        <li><a class="menu-item" href="#footer-section">Contact</a></li>
+      </ul>
+  </div>
+  <script src="main.js"></script>
 </body>
+
 </html>
