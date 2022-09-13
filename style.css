@@ -8,19 +8,23 @@
 }
 
 body {
+  min-height: 100vh;
   background: #e5e5e5;
 }
 
-header {
+.toolbar {
+  width: 100%;
   background: #fff;
+  padding: 26px;
+  display: flex;
+  position: fixed;
 }
 
 nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 24px;
-  margin: 0 auto;
 }
 
 .menu {
@@ -33,21 +37,31 @@ nav {
   transition-duration: 1s;
 }
 
+main {
+  display: block;
+}
+
 .menu:hover {
   font-size: 20px;
 }
 
 .profile {
-  background: #fff;
-  padding-bottom: 26px;
-  display: flex;
+  width: 100%;
+  background:
+    url("img/header-shapes-mobile.svg"),
+    url("img/header-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+  background-position: center, bottom left;
 }
 
 .profile-background {
-  background: url(img/header-shapes\ mobile@2x.svg);
-  background-position: right;
-  background-repeat: no-repeat;
-  padding: 160px 24px 8px 24px;
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ padding-top: 102px;
+ padding-left: 24px;
+ padding-right: 24px;
 }
 
 h1 {
@@ -56,27 +70,6 @@ h1 {
   font-weight: 700;
   line-height: 52px;
   margin-bottom: 12px;
-  max-width: 360px;
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  75% {
-    font-size: 300%;
-    margin-left: 25%;
-    width: 150%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
 }
 
 .about-me {
@@ -93,7 +86,7 @@ h1 {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .social-media {
@@ -104,6 +97,7 @@ h1 {
 }
 
 .middle {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 88px;
@@ -111,6 +105,7 @@ h1 {
 }
 
 .works {
+  width: 100%;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
   padding: 16px;
@@ -120,6 +115,7 @@ h1 {
 }
 
 .works-2 {
+  width: 100%;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
   padding: 16px;
@@ -128,13 +124,9 @@ h1 {
   background: #fff;
 }
 
-.project-image {
-  display: flex;
-  flex-direction: column;
-}
-
-.image {
+.project-image img {
   width: 100%;
+  height: auto;
 }
 
 .projects {
@@ -222,17 +214,19 @@ h1 {
 }
 
 .about-my-self {
-  background: #fff;
+  background: url("img/about-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 114px 24px 113.85px 24px;
+  padding: 114px 24px;
+  width: 100%;
 }
 
 .about-article {
   display: flex;
   flex-direction: column;
-  align-items: flex-star;
 }
 
 .tittle {
@@ -249,7 +243,6 @@ h1 {
   font-weight: 400;
   line-height: 24px;
   margin-bottom: 12px;
-  max-width: max-content;
 }
 
 .about-text {
@@ -268,6 +261,7 @@ h1 {
 }
 
 .skill-list {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -275,13 +269,16 @@ h1 {
 }
 
 .skill-list-desktop {
+  width: 100%;
   display: none;
 }
 
 .one,
+.two,
 .skill-options {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   margin-right: 60px;
   margin-bottom: 36px;
   color: #000;
@@ -291,13 +288,7 @@ h1 {
 }
 
 .two {
-  display: flex;
-  justify-content: space-between;
-  margin: 36px 60px 23px 0;
-  color: #000;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
+  margin-top: 36px;
 }
 
 .skill,
@@ -315,11 +306,13 @@ h1 {
 footer {
   display: flex;
   flex-direction: column;
-  background: #6070ff;
+  background: #fff url("img/Contact-me-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .contact-background {
-  background: url(img/contactfinal.png);
+  background: url(img/contact\ form\ shapes-mobile.svg);
   background-position: right;
   background-repeat: no-repeat;
   display: flex;
@@ -346,51 +339,33 @@ footer {
 .contact-info {
   color: #ebebff;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 28px;
   text-align: center;
   max-width: 370px;
 }
 
-form {
-  display: flex;
-  justify-content: center;
-  margin: 0 24px 45px 24px;
-}
-
 .contact-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
+  margin: 24px;
 }
 
-#name {
-  width: 327px;
-  height: 48px;
-  border: 1px solid #cfd8dc;
-  background: #fff;
-  border-radius: 8px;
-}
-
-#mail {
-  width: 327px;
-  height: 48px;
-  border: 1px solid #cfd8dc;
-  border-radius: 8px;
-  background: #fff;
-}
-
-#message-text {
-  width: 327px;
-  height: 170px;
-  border: 1px solid #cfd8dc;
-  border-radius: 8px;
-  background: #fff;
+.button-contactMe {
+  align-self: flex-start;
 }
 
 #name,
 #mail,
 #message-text {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  background: #fff;
   font-size: 17px;
   font-weight: 400;
   line-height: 20px;
@@ -399,10 +374,8 @@ form {
   color: #172b4d;
 }
 
+
 @media screen and (min-width: 768px) {
-  nav {
-    padding: 26px 155px 92px 155px;
-  }
 
   .bars {
     display: none;
@@ -412,45 +385,43 @@ form {
     display: flex;
     text-align: center;
     align-items: center;
+
     gap: 32px;
   }
 
   .profile {
-    background: #fff;
-    display: flex;
+    width: 100%;
+    background:
+      url("img/Header-bg-desktop.svg"),
+      url("img/header-bg-shape-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    background-position: center, bottom left;
   }
 
   .profile-background {
-    background: url(img/Header2x.png);
-    background-size: cover;
-    background-position: right;
-    padding: 118px 0 76.54px 34.6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 241px 252px 87px 225px;
   }
 
   h1 {
-    max-width: 430px;
-    margin-top: 150px;
-    margin-left: 225px;
-    font-size: 48px;
-    line-height: 60px;
+    color: #172b4d;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+    margin-bottom: 12px;
   }
 
   .about-me {
-    max-width: max-content;
-    margin-left: 225px;
-    margin-right: 260px;
     font-size: 20px;
     line-height: 28px;
   }
 
-  .social-text,
-  .social-media {
-    margin-left: 225px;
-  }
-
   .middle {
     grid-row-gap: 142px;
-    margin: 142px 142px;
+    padding: 142px 142px;
   }
 
   .works {
@@ -470,6 +441,7 @@ form {
   .project-image {
     grid-area: imageArea;
   }
+
 
   .projects {
     grid-area: projectArea;
@@ -505,41 +477,50 @@ form {
   }
 
   .about-my-self {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "aboutArea skillArea";
-  }
-
-  .about-article {
-    grid-area: aboutArea;
-    margin-left: 142px;
-  }
-
-  .skill-list-desktop {
-    grid-area: skillArea;
-    display: grid;
-    margin: 166px 182px 0 37px;
+    background: url("img/about-bg-shape-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 142px;
+    gap: 37px;
   }
 
   .myself-text {
-    max-width: 450px;
+    max-width: 447px;
     margin-top: 12px;
   }
 
-  .tittle {
-    max-width: 265px;
-    margin-top: 142px;
+  .skill-list-desktop {
+    display: flex;
+    max-width: 684px;
+  }
+
+  .skill-desktop {
+    width: 100%;
+  }
+
+  .skill-options {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    background: #fff url("img/contact-bg-shape-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .contact-background {
-    background: url(img/contact\ form\ background\ shapes.svg);
-    background-size: cover;
+    background: url(img/contact-shapes-desktop.svg);
+    background-size: contain;
     background-repeat: no-repeat;
-    margin: 79.09px 74px 48.21px 135px;
-  }
-
-  form {
-    align-content: center;
+    background-position: right;
+    margin: 79.09px 74px 48.21px 40px;
   }
 
   .contact-info {
@@ -551,6 +532,10 @@ form {
   #message-text {
     max-width: 447px;
     border-radius: 0;
+  }
+
+  .button-contactMe {
+    align-self: center;
   }
 }
 

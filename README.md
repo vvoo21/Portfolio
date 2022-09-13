@@ -2,12 +2,14 @@
 
 # Portfolio
 
-> In this project, I built my website portfolio. I used HTML and CSS properties, proper GitHub Flow, and deployed my website using GitHub Pages.
+> In this project, I built my website portfolio. I used HTML, CSS, JAVASCRIPT,  proper GitHub Flow, and deployed my website using GitHub Pages.
+
 
 ## Built With
 
 - HTML
 - CSS
+- JAVASCRIPT
 
 ## Live Demo
 
