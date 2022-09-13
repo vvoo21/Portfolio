@@ -56,12 +56,12 @@ main {
 }
 
 .profile-background {
- width: 100%;
- display: flex;
- flex-direction: column;
- padding-top: 102px;
- padding-left: 24px;
- padding-right: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 102px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 h1 {
@@ -374,9 +374,7 @@ footer {
   color: #172b4d;
 }
 
-
 @media screen and (min-width: 768px) {
-
   .bars {
     display: none;
   }
@@ -385,7 +383,6 @@ footer {
     display: flex;
     text-align: center;
     align-items: center;
-
     gap: 32px;
   }
 
@@ -441,7 +438,6 @@ footer {
   .project-image {
     grid-area: imageArea;
   }
-
 
   .projects {
     grid-area: projectArea;
