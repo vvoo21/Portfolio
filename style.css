@@ -104,9 +104,9 @@ h1 {
   padding: 114px 24px;
 }
 
-.works, 
+.works,
 .works-2,
-.overlay-card  {
+.overlay-card {
   width: 100%;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
@@ -314,7 +314,7 @@ h1 {
 footer {
   display: flex;
   flex-direction: column;
-  background:  #6070FF;
+  background: #6070ff;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
@@ -522,7 +522,7 @@ footer {
   }
 
   .contact-background {
-    background: #6070FF url(img/contact-shapes-desktop.svg);
+    background: #6070ff url(img/contact-shapes-desktop.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -593,7 +593,7 @@ footer {
   scale: 1;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
   overflow: auto;
   padding: 50px 16px;
@@ -626,7 +626,7 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
+  justify-content: flex-start;
 }
 
 .img-devider {
@@ -643,18 +643,16 @@ footer {
 }
 
 .btn-link {
-  min-width: max-content
+  min-width: max-content;
 }
 
 .icon-btn {
   margin-left: 14px;
 }
 
-
 /* desktop-version Overlay cards-projects section styles */
 
 @media screen and (min-width: 768px) {
-
   .modal-container {
     padding: 77px 142px;
   }

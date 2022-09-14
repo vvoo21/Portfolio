@@ -64,17 +64,16 @@ const projectsCard = [
     technologies: ['html', 'Ruby on rails', 'css', 'javaScript'],
     linkLiveVersion: 'https://vvoo21.github.io/Portfolio/',
     linkSource: 'https://github.com/vvoo21/Portfolio',
-  }
-]
+  },
+];
 
 const createProjects = () => {
-  projectsCard.forEach((project, index) => {
-
+  projectsCard.forEach((project) => {
     const card1 = document.createElement('div');
     card1.classList.add('works');
-    cardsSection.appendChild(card1);    
+    cardsSection.appendChild(card1);
 
-    if(card1 % 2 === 1) {
+    if (card1 % 2 === 1) {
       card1.classList.add('works-2');
     }
 
@@ -108,11 +107,11 @@ const createProjects = () => {
       const itemInfo = document.createElement('li');
       clientRole.appendChild(itemInfo);
 
-      if(index === 0){
+      if (index === 0) {
         itemInfo.classList.add('client');
       }
-      
-      if(item === 'img/Counter.svg'){
+
+      if (item === 'img/Counter.svg') {
         const itemImg = document.createElement('img');
         itemImg.classList.add('imgPoint');
         itemImg.setAttribute('src', item);
@@ -137,10 +136,9 @@ const createProjects = () => {
       technology.innerText = item;
       technologyCard.appendChild(technology);
 
-      if(index === 1){
+      if (index === 1) {
         technology.classList.add('ruby');
       }
-
     });
 
     const seeProject = document.createElement('button');
@@ -148,18 +146,16 @@ const createProjects = () => {
     seeProject.innerText = 'See Project';
     seeProject.id = project.id;
     infoCard.appendChild(seeProject);
-
   });
-}
+};
 
 createProjects();
 
 const createModal = () => {
-  projectsCard.forEach(modal => {
-
+  projectsCard.forEach((modal) => {
     const cardModal = document.createElement('div');
-    cardModal.classList.add('overlay-card');    
-    cardModal.classList.add('hide');   
+    cardModal.classList.add('overlay-card');
+    cardModal.classList.add('hide');
     modalsSection.appendChild(cardModal);
 
     const modalNav = document.createElement('div');
@@ -182,18 +178,18 @@ const createModal = () => {
     cancelModal.appendChild(cancelImg);
 
     const clientRoleModal = document.createElement('ul');
-    clientRoleModal.classList.add('project-info', 'modal28', 'modal12')
+    clientRoleModal.classList.add('project-info', 'modal28', 'modal12');
     cardModal.appendChild(clientRoleModal);
 
     modal.infoProject.forEach((item, index) => {
       const elementModal = document.createElement('li');
       clientRoleModal.appendChild(elementModal);
 
-      if(index === 0){
+      if (index === 0) {
         elementModal.classList.add('client');
       }
-      
-      if(item === 'img/Counter.svg'){
+
+      if (item === 'img/Counter.svg') {
         const imgItem = document.createElement('img');
         imgItem.setAttribute('src', item);
         imgItem.setAttribute('alt', 'point');
@@ -201,7 +197,6 @@ const createModal = () => {
       } else {
         elementModal.innerText = item;
       }
-
     });
 
     const imgModal = document.createElement('img');
@@ -213,7 +208,7 @@ const createModal = () => {
     const modalInfo = document.createElement('div');
     modalInfo.classList.add('modal-card-info');
     cardModal.appendChild(modalInfo);
-    
+
     const textmodal = document.createElement('p');
     textmodal.classList.add('primary-text', 'modal-text', 'modal12');
     textmodal.innerText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry.";
@@ -231,11 +226,11 @@ const createModal = () => {
     modal.technologies.splice(1, 1);
 
     modal.technologies.forEach((lang, index) => {
-      const langModal =document.createElement('li');
+      const langModal = document.createElement('li');
       langModal.innerText = lang;
       languages.appendChild(langModal);
 
-      if(index > 2){
+      if (index > 2) {
         langModal.classList.add('ruby');
       }
     });
@@ -248,14 +243,14 @@ const createModal = () => {
 
     const btnsModal = document.createElement('div');
     btnsModal.classList.add('btn-modal');
-    technologiesModal.appendChild(btnsModal); 
+    technologiesModal.appendChild(btnsModal);
 
     const btnSee = document.createElement('a');
     btnSee.classList.add('button', 'btn-link');
     btnSee.setAttribute('href', modal.linkLiveVersion);
     btnSee.innerText = 'See live';
     btnsModal.appendChild(btnSee);
-    
+
     const seeIcon = document.createElement('img');
     seeIcon.classList.add('icon-btn');
     seeIcon.setAttribute('src', 'img/see-live.png');
@@ -267,38 +262,33 @@ const createModal = () => {
     btnSource.setAttribute('href', modal.linkSource);
     btnSource.innerText = 'See Source';
     btnsModal.appendChild(btnSource);
-    
+
     const sourceIcon = document.createElement('img');
     sourceIcon.classList.add('icon-btn');
     sourceIcon.setAttribute('src', 'img/see-source.png');
     sourceIcon.setAttribute('alt', 'link source');
     btnSource.appendChild(sourceIcon);
-
   });
-}
+};
 
-createModal()
+createModal();
 
 const modal = document.querySelectorAll('.overlay-card');
 
 cardsSection.addEventListener('click', (e) => {
-  if(e.target.textContent === 'See Project'){
-    const id = e.target.id;
-    modal[id-1].classList.remove('hide');
+  if (e.target.textContent === 'See Project') {
+    const { id } = e.target;
+    modal[id - 1].classList.remove('hide');
     modalsSection.classList.remove('hide');
   }
 });
 
 modalsSection.addEventListener('click', (e) => {
-  if(e.target.parentElement.classList.contains('close')){
-    modalsSection.classList.add('hide');  
+  if (e.target.parentElement.classList.contains('close')) {
+    modalsSection.classList.add('hide');
     e.target.parentElement.parentElement.parentElement.classList.add('hide');
-  } else if(e.target.classList.contains('modal-container')){
+  } else if (e.target.classList.contains('modal-container')) {
     modalsSection.classList.add('hide');
     modal.forEach((element) => element.classList.add('hide'));
   }
-
-  console.log(e.target);
 });
-
-
