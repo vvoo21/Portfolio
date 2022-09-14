@@ -82,7 +82,7 @@ h1 {
 }
 
 .social-text {
-  color: #7f8cff;
+  color: #0004ff;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -104,29 +104,25 @@ h1 {
   padding: 114px 24px;
 }
 
-.works {
+.works,
+.works-2,
+.overlay-card {
   width: 100%;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
-  padding: 16px;
+  padding: 18px 16px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background: #fff;
 }
 
-.works-2 {
-  width: 100%;
-  border: 1px solid #dfe1e6;
-  border-radius: 16px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-}
-
-.project-image img {
+.project-image,
+.image {
   width: 100%;
   height: auto;
+  min-height: 200px;
+  min-width: 250px;
 }
 
 .projects {
@@ -158,7 +154,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #7a869a;
+  color: #6b778c;
   font-size: 13px;
   font-weight: 600;
   line-height: 16px;
@@ -168,6 +164,18 @@ h1 {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: 25px;
+}
+
+.categories li {
+  background: #ebebff;
+  border-radius: 8px;
+  padding: 4px 12px;
+  color: #0004ff;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
 }
 
 .ruby {
@@ -246,7 +254,7 @@ h1 {
 }
 
 .about-text {
-  color: #7f8cff;
+  color: #0004ff;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -306,15 +314,17 @@ h1 {
 footer {
   display: flex;
   flex-direction: column;
-  background: #fff url("img/Contact-me-mobile.png");
+  background: #6070ff;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: left;
 }
 
 .contact-background {
-  background: url(img/contact\ form\ shapes-mobile.svg);
+  background: url("img/contact\ form\ shapes-mobile.svg");
   background-position: right;
   background-repeat: no-repeat;
+  background-size: contain;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -418,7 +428,7 @@ footer {
 
   .middle {
     grid-row-gap: 142px;
-    padding: 142px 142px;
+    padding: 142px;
   }
 
   .works {
@@ -512,7 +522,7 @@ footer {
   }
 
   .contact-background {
-    background: url(img/contact-shapes-desktop.svg);
+    background: #6070ff url(img/contact-shapes-desktop.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -569,4 +579,119 @@ footer {
   position: fixed;
   right: 2%;
   padding: 8px;
+}
+
+/* Overlay cards-projects section styles */
+
+.modal-container {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  scale: 1;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  overflow: auto;
+  padding: 50px 16px;
+  width: 100%;
+}
+
+.hide {
+  scale: 0;
+  display: none;
+}
+
+.modal-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 16px;
+}
+
+.modal-card-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal12 {
+  margin-bottom: 12px;
+}
+
+.modal-tecnologies {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.img-devider {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.btn-modal {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.btn-link {
+  min-width: max-content;
+}
+
+.icon-btn {
+  margin-left: 14px;
+}
+
+/* desktop-version Overlay cards-projects section styles */
+
+@media screen and (min-width: 768px) {
+  .modal-container {
+    padding: 77px 142px;
+  }
+
+  .overlay-card {
+    padding: 24px;
+  }
+
+  .modal28 {
+    margin-bottom: 28px;
+  }
+
+  .img-modal {
+    margin-bottom: 59px;
+    max-height: 700px;
+  }
+
+  .modal-card-info {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .modal-text {
+    width: 60%;
+  }
+
+  .modal-tecnologies {
+    width: 40%;
+  }
+
+  .categ-modal {
+    display: flex;
+    flex-direction: row;
+    max-width: 250px;
+    flex-wrap: wrap;
+  }
+
+  .btn-modal {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
 }
