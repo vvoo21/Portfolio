@@ -590,7 +590,7 @@ footer {
   top: 0;
   bottom: 0;
   right: 0;
-  display: none;
+  scale: 1;
   flex-direction: column;
   align-items: center;
   background-color: rgba(0,0,0,0.4);
@@ -598,6 +598,11 @@ footer {
   overflow: auto;
   padding: 50px 16px;
   width: 100%;
+}
+
+.hide {
+  scale: 0;
+  display: none;
 }
 
 .modal-nav {

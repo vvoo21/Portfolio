@@ -146,6 +146,7 @@ const createProjects = () => {
     const seeProject = document.createElement('button');
     seeProject.classList.add('button');
     seeProject.innerText = 'See Project';
+    seeProject.id = project.id;
     infoCard.appendChild(seeProject);
 
   });
@@ -157,7 +158,8 @@ const createModal = () => {
   projectsCard.forEach(modal => {
 
     const cardModal = document.createElement('div');
-    cardModal.classList.add('overlay-card');
+    cardModal.classList.add('overlay-card');    
+    cardModal.classList.add('hide');   
     modalsSection.appendChild(cardModal);
 
     const modalNav = document.createElement('div');
@@ -170,6 +172,8 @@ const createModal = () => {
     modalNav.appendChild(tittleModal);
 
     const cancelModal = document.createElement('a');
+    cancelModal.setAttribute('href', '#');
+    cancelModal.classList.add('close');
     modalNav.appendChild(cancelModal);
 
     const cancelImg = document.createElement('img');
@@ -275,5 +279,26 @@ const createModal = () => {
 
 createModal()
 
+const modal = document.querySelectorAll('.overlay-card');
+
+cardsSection.addEventListener('click', (e) => {
+  if(e.target.textContent === 'See Project'){
+    const id = e.target.id;
+    modal[id-1].classList.remove('hide');
+    modalsSection.classList.remove('hide');
+  }
+});
+
+modalsSection.addEventListener('click', (e) => {
+  if(e.target.parentElement.classList.contains('close')){
+    modalsSection.classList.add('hide');  
+    e.target.parentElement.parentElement.parentElement.classList.add('hide');
+  } else if(e.target.classList.contains('modal-container')){
+    modalsSection.classList.add('hide');
+    modal.forEach((element) => element.classList.add('hide'));
+  }
+
+  console.log(e.target);
+});
 
 
