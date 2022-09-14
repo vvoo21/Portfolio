@@ -4,6 +4,7 @@ const overlay = document.querySelector('.overlay');
 const cancel = document.querySelector('.cancel');
 const links = document.querySelectorAll('.menu-item');
 const cardsSection = document.querySelector('.middle');
+const modalsSection = document.querySelector('.modal-container');
 
 hamburger.addEventListener('click', () => {
   mainMenu.style.display = 'flex';
@@ -66,7 +67,7 @@ const projectsCard = [
   }
 ]
 
-const projectView = () => {
+const createProjects = () => {
   projectsCard.forEach((project, index) => {
 
     const card1 = document.createElement('div');
@@ -100,8 +101,8 @@ const projectView = () => {
     clientRole.classList.add('project-info');
     infoCard.appendChild(clientRole);
 
-    project.infoProject.splice(1, 0, 'img/Counter.png');
-    project.infoProject.splice(3, 0, 'img/Counter.png');
+    project.infoProject.splice(1, 0, 'img/Counter.svg');
+    project.infoProject.splice(3, 0, 'img/Counter.svg');
 
     project.infoProject.forEach((item, index) => {
       const itemInfo = document.createElement('li');
@@ -111,7 +112,7 @@ const projectView = () => {
         itemInfo.classList.add('client');
       }
       
-      if(item === 'img/Counter.png'){
+      if(item === 'img/Counter.svg'){
         const itemImg = document.createElement('img');
         itemImg.classList.add('imgPoint');
         itemImg.setAttribute('src', item);
@@ -139,6 +140,7 @@ const projectView = () => {
       if(index === 1){
         technology.classList.add('ruby');
       }
+
     });
 
     const seeProject = document.createElement('button');
@@ -149,5 +151,129 @@ const projectView = () => {
   });
 }
 
-projectView();
+createProjects();
+
+const createModal = () => {
+  projectsCard.forEach(modal => {
+
+    const cardModal = document.createElement('div');
+    cardModal.classList.add('overlay-card');
+    modalsSection.appendChild(cardModal);
+
+    const modalNav = document.createElement('div');
+    modalNav.classList.add('modal-nav');
+    cardModal.appendChild(modalNav);
+
+    const tittleModal = document.createElement('h2');
+    tittleModal.classList.add('project-tittle', 'modal12');
+    tittleModal.innerText = modal.tittle;
+    modalNav.appendChild(tittleModal);
+
+    const cancelModal = document.createElement('a');
+    modalNav.appendChild(cancelModal);
+
+    const cancelImg = document.createElement('img');
+    cancelImg.setAttribute('src', 'img/cancel-icon.png');
+    cancelImg.setAttribute('alt', 'cancel icon');
+    cancelModal.appendChild(cancelImg);
+
+    const clientRoleModal = document.createElement('ul');
+    clientRoleModal.classList.add('project-info', 'modal28', 'modal12')
+    cardModal.appendChild(clientRoleModal);
+
+    modal.infoProject.forEach((item, index) => {
+      const elementModal = document.createElement('li');
+      clientRoleModal.appendChild(elementModal);
+
+      if(index === 0){
+        elementModal.classList.add('client');
+      }
+      
+      if(item === 'img/Counter.svg'){
+        const imgItem = document.createElement('img');
+        imgItem.setAttribute('src', item);
+        imgItem.setAttribute('alt', 'point');
+        elementModal.appendChild(imgItem);
+      } else {
+        elementModal.innerText = item;
+      }
+
+    });
+
+    const imgModal = document.createElement('img');
+    imgModal.classList.add('image', 'img-modal', 'modal12');
+    imgModal.setAttribute('src', modal.image);
+    imgModal.setAttribute('alt', 'project image');
+    cardModal.appendChild(imgModal);
+
+    const modalInfo = document.createElement('div');
+    modalInfo.classList.add('modal-card-info');
+    cardModal.appendChild(modalInfo);
+    
+    const textmodal = document.createElement('p');
+    textmodal.classList.add('primary-text', 'modal-text', 'modal12');
+    textmodal.innerText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry.";
+    modalInfo.appendChild(textmodal);
+
+    const technologiesModal = document.createElement('div');
+    technologiesModal.classList.add('modal-tecnologies');
+    modalInfo.appendChild(technologiesModal);
+
+    const languages = document.createElement('ul');
+    languages.classList.add('categories', 'categ-modal');
+    technologiesModal.appendChild(languages);
+
+    modal.technologies.push('github', 'ruby', 'Bootstraps');
+    modal.technologies.splice(1, 1);
+
+    modal.technologies.forEach((lang, index) => {
+      const langModal =document.createElement('li');
+      langModal.innerText = lang;
+      languages.appendChild(langModal);
+
+      if(index > 2){
+        langModal.classList.add('ruby');
+      }
+    });
+
+    const imgDevider = document.createElement('img');
+    imgDevider.classList.add('img-devider');
+    imgDevider.setAttribute('src', 'img/devider-icon.png');
+    imgDevider.setAttribute('alt', 'devider icon');
+    technologiesModal.appendChild(imgDevider);
+
+    const btnsModal = document.createElement('div');
+    btnsModal.classList.add('btn-modal');
+    technologiesModal.appendChild(btnsModal); 
+
+    const btnSee = document.createElement('a');
+    btnSee.classList.add('button', 'btn-link');
+    btnSee.setAttribute('href', modal.linkLiveVersion);
+    btnSee.innerText = 'See live';
+    btnsModal.appendChild(btnSee);
+    
+    const seeIcon = document.createElement('img');
+    seeIcon.classList.add('icon-btn');
+    seeIcon.setAttribute('src', 'img/see-live.png');
+    seeIcon.setAttribute('alt', 'link liveVersion');
+    btnSee.appendChild(seeIcon);
+
+    const btnSource = document.createElement('a');
+    btnSource.classList.add('button', 'btn-link');
+    btnSource.setAttribute('href', modal.linkSource);
+    btnSource.innerText = 'See Source';
+    btnsModal.appendChild(btnSource);
+    
+    const sourceIcon = document.createElement('img');
+    sourceIcon.classList.add('icon-btn');
+    sourceIcon.setAttribute('src', 'img/see-source.png');
+    sourceIcon.setAttribute('alt', 'link source');
+    btnSource.appendChild(sourceIcon);
+
+  });
+}
+
+createModal()
+
+
 
