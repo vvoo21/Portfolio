@@ -292,3 +292,54 @@ modalsSection.addEventListener('click', (e) => {
     modal.forEach((element) => element.classList.add('hide'));
   }
 });
+
+//variables
+
+const userName = document.querySelector('#name');
+const userEmail = document.querySelector('#mail');
+const userMessage = document.querySelector('#message-text');
+const errorMsg = document.querySelector('.msg');
+const emailRegex = /^[a-z0-9]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
+const submitBtn = document.querySelector('.button-contactMe')
+
+eventListeners()
+function eventListeners() {
+
+  document.addEventListener('DOMContentLoaded', submitForm);
+
+  userName.addEventListener('blur', validateForm);
+  userEmail.addEventListener('blur', validateForm);
+  userMessage.addEventListener('blur', validateForm);
+}
+
+//functions 
+
+function submitForm() {
+  submitBtn.disabled = true;
+}
+
+function validateForm (e) {
+
+  if(e.target.value.length > 0){
+    showError('');
+  } else {
+    showError("Please, all fields are required.");
+  }
+
+  if(e.target.type === 'email'){
+    if(emailRegex.test(e.target.value)){
+      showError('');
+    } else {
+      showError('Please use lowercase for a valid email address.');
+    }
+  }
+
+  if(userName.value !== '' && emailRegex.test(userEmail.value) && userMessage.value !== ''){
+    submitBtn.disabled = false;
+  } 
+
+}
+
+function showError(message) {
+  errorMsg.textContent = message;
+}
