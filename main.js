@@ -320,6 +320,12 @@ form.addEventListener('input', () =>{
   }; 
 
   localStorage.setItem('inputForm', JSON.stringify(contactForm));
-}); 
+});
 
+inputForm =  JSON.parse(localStorage.getItem('inputForm'));
 
+if(inputForm != null){
+  userName.value = inputForm.name;
+  userEmail.value = inputForm.email;
+  userMsg.value = inputForm.message;
+}
