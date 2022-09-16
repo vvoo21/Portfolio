@@ -32,6 +32,13 @@ download and enjoy https://github.com/vvoo21/Portfolio
 - Twitter: [@vaneoliverosp](https://twitter.com/vaneoliverosp)
 - LinkedIn: [vaneoliverosp](https://www.linkedin.com/in/vaneoliverosp/)
 
+👤 **Author2**
+
+- GitHub: [@PedroH-Neves](https://github.com/PedroH-Neves)
+- Twitter: [@PedroHDN710](https://twitter.com/PedroHDN710)
+- LinkedIn: [Pedro Neves](https://www.linkedin.com/in/pedro-henrique-domingues-neves-8a5878244/)
+
+
 
 ## 🤝 Contributing
 
