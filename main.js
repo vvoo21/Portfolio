@@ -100,8 +100,8 @@ const createProjects = () => {
     clientRole.classList.add('project-info');
     infoCard.appendChild(clientRole);
 
-    project.infoProject.splice(1, 0, 'img/Counter.svg');
-    project.infoProject.splice(3, 0, 'img/Counter.svg');
+    project.infoProject.splice(1, 0, 'img/Counter.png');
+    project.infoProject.splice(3, 0, 'img/Counter.png');
 
     project.infoProject.forEach((item, index) => {
       const itemInfo = document.createElement('li');
@@ -111,7 +111,7 @@ const createProjects = () => {
         itemInfo.classList.add('client');
       }
 
-      if (item === 'img/Counter.svg') {
+      if (item === 'img/Counter.png') {
         const itemImg = document.createElement('img');
         itemImg.classList.add('imgPoint');
         itemImg.setAttribute('src', item);
@@ -189,7 +189,7 @@ const createModal = () => {
         elementModal.classList.add('client');
       }
 
-      if (item === 'img/Counter.svg') {
+      if (item === 'img/Counter.png') {
         const imgItem = document.createElement('img');
         imgItem.setAttribute('src', item);
         imgItem.setAttribute('alt', 'point');
