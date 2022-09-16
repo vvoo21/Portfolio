@@ -293,15 +293,12 @@ modalsSection.addEventListener('click', (e) => {
   }
 });
 
-//variables
+// variables
 
-const userName = document.querySelector('#name');
 const userEmail = document.querySelector('#mail');
-const userMessage = document.querySelector('#message-text');
 const errorMsg = document.querySelector('.msg');
 const emailRegex = /^[a-z0-9]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
 const form = document.querySelector('.contact-form');
-
 
 form.addEventListener('submit', (e) => {
   if (emailRegex.test(userEmail.value)) {
