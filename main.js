@@ -292,3 +292,19 @@ modalsSection.addEventListener('click', (e) => {
     modal.forEach((element) => element.classList.add('hide'));
   }
 });
+
+// variables
+
+const userEmail = document.querySelector('#mail');
+const errorMsg = document.querySelector('.msg');
+const emailRegex = /^[a-z0-9]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
+const form = document.querySelector('.contact-form');
+
+form.addEventListener('submit', (e) => {
+  if (emailRegex.test(userEmail.value)) {
+    errorMsg.textContent = '';
+  } else {
+    e.preventDefault();
+    errorMsg.textContent = 'Please use lowercase for a valid email address.';
+  }
+});
