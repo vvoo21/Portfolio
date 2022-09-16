@@ -295,6 +295,8 @@ modalsSection.addEventListener('click', (e) => {
 
 // variables
 
+const userName = document.querySelector('#name');
+const userMsg = document.querySelector('#message-text');
 const userEmail = document.querySelector('#mail');
 const errorMsg = document.querySelector('.msg');
 const emailRegex = /^[a-z0-9]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
@@ -308,3 +310,16 @@ form.addEventListener('submit', (e) => {
     errorMsg.textContent = 'Please use lowercase for a valid email address.';
   }
 });
+
+
+form.addEventListener('input', () =>{
+  const contactForm = {
+    name: userName.value, 
+    email: userEmail.value,
+    message: userMsg.value
+  }; 
+
+  localStorage.setItem('inputForm', JSON.stringify(contactForm));
+}); 
+
+
