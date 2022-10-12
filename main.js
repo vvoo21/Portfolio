@@ -24,6 +24,17 @@ for (let i = 0; i < links.length; i += 1) {
 const projectsCard = [
   {
     id: '1',
+    image: 'img/to-do-list.png',
+    tittle: 'To-Do List',
+    infoProject: ['MICROVERSE', 'Full Stack Dev', '2022'],
+    description: 'In this project, I built a to-do list app, which is inspired by the minimalist website. Build withHTML/CSS & JavaScript best practices: Correct use of tags, elements, properties and syntax.',
+    technologies: ['html', 'Webpack', 'css', 'javaScript'],
+    linkLiveVersion: 'https://vvoo21.github.io/To-Do-List-App/dist/',
+    linkSource: 'https://github.com/vvoo21/To-Do-List-App',
+  },
+
+  {
+    id: '2',
     image: 'img/desktop1.png',
     tittle: 'Tonic',
     infoProject: ['CANOPY', 'Back End Dev', '2015'],
@@ -34,7 +45,7 @@ const projectsCard = [
   },
 
   {
-    id: '2',
+    id: '3',
     image: 'img/desktop2.png',
     tittle: 'Multi-Post Stories',
     infoProject: ['FACEBOOK', 'Full Stack Dev', '2015'],
@@ -45,7 +56,7 @@ const projectsCard = [
   },
 
   {
-    id: '3',
+    id: '4',
     image: 'img/desktop3.png',
     tittle: 'Facebook 360',
     infoProject: ['FACEBOOK', 'Full Stack Dev', '2015'],
@@ -56,7 +67,7 @@ const projectsCard = [
   },
 
   {
-    id: '4',
+    id: '5',
     image: 'img/desktop4.png',
     tittle: 'Uber Navigation',
     infoProject: ['Uber', 'Lead Developer', '2018'],
@@ -211,7 +222,7 @@ const createModal = () => {
 
     const textmodal = document.createElement('p');
     textmodal.classList.add('primary-text', 'modal-text', 'modal12');
-    textmodal.innerText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry.";
+    textmodal.innerText = modal.description;
     modalInfo.appendChild(textmodal);
 
     const technologiesModal = document.createElement('div');

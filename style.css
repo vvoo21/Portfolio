@@ -123,6 +123,7 @@ h1 {
   height: auto;
   min-height: 200px;
   min-width: 250px;
+  border-radius: 20px;
 }
 
 .projects {
