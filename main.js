@@ -60,7 +60,7 @@ const projectsCard = [
     image: 'img/math-magicians.png',
     tittle: 'Math Magicians',
     infoProject: ['MICROVERSE', 'Full Stack Dev', '2022'],
-    description: "Math magicians is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and Read a random math-related quote.",
+    description: 'Math magicians is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and Read a random math-related quote.',
     technologies: ['html', 'React', 'css', 'javaScript'],
     linkLiveVersion: 'https://math-magicians-jgzl.onrender.com/',
     linkSource: 'https://github.com/vvoo21/math-magicians',
@@ -322,15 +322,12 @@ form.addEventListener('submit', (e) => {
   }
 });
 
-
-form.addEventListener('input', () =>{
+form.addEventListener('input', () => {
   const contactForm = {
-    name: userName.value, 
+    name: userName.value,
     email: userEmail.value,
-    message: userMsg.value
-  }; 
+    message: userMsg.value,
+  };
 
   localStorage.setItem('inputForm', JSON.stringify(contactForm));
-}); 
-
-
+});
