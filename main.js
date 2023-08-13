@@ -24,6 +24,17 @@ for (let i = 0; i < links.length; i += 1) {
 const projectsCard = [
   {
     id: '1',
+    image: 'img/budgetApp.png',
+    tittle: 'BeFinanceFit',
+    infoProject: ['MICROVERSE', 'Full Stack Dev', '2023'],
+    description: 'BeFinanceFit is a mobile web application where you can manage your budget: you have a list of transactions associated with a category so that you can see how much money you spent and on what',
+    technologies: ['html', 'RoR', 'css', 'javaScript'],
+    linkLiveVersion: 'https://app-render-x29z.onrender.com/categories',
+    linkSource: 'https://github.com/vvoo21/BeFinanceFit',
+  },
+
+  {
+    id: '2',
     image: 'img/React App.png',
     tittle: 'Crypto App',
     infoProject: ['MICROVERSE', 'Full Stack Dev', '2023'],
@@ -34,7 +45,7 @@ const projectsCard = [
   },
 
   {
-    id: '2',
+    id: '3',
     image: 'img/Space.png',
     tittle: 'Space Travelers Hub',
     infoProject: ['MICROVERSE', 'Full Stack Dev', '2022'],
@@ -45,7 +56,7 @@ const projectsCard = [
   },
 
   {
-    id: '3',
+    id: '4',
     image: 'img/Bookstore.png',
     tittle: 'Bookstore',
     infoProject: ['MICROVERSE', 'Full Stack Dev', '2022'],
@@ -56,7 +67,7 @@ const projectsCard = [
   },
 
   {
-    id: '4',
+    id: '5',
     image: 'img/math-magicians.png',
     tittle: 'Math Magicians',
     infoProject: ['MICROVERSE', 'Full Stack Dev', '2022'],
@@ -67,7 +78,7 @@ const projectsCard = [
   },
 
   {
-    id: '5',
+    id: '6',
     image: 'img/leaderboard.png',
     tittle: 'Leaderboard',
     infoProject: ['MICROVERSE', 'Full Stack Dev', '2022'],
